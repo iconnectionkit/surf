@@ -235,6 +235,7 @@ func (bow *Browser) Post(u string, contentType string, body io.Reader) error {
 	if err != nil {
 		return err
 	}
+	fmt.Println("IM POSTING")
 	return bow.httpPOST(ur, bow.Url(), contentType, body)
 }
 
