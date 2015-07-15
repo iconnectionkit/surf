@@ -633,7 +633,7 @@ func (bow *Browser) httpRequest(req *http.Request) error {
 	bow.state = jar.NewHistoryState(req, resp, dom)
 	bow.postSend()
 
-	return errors.New(fmt.Sprintf(buff))
+	return errors.New(buff.String())
 }
 
 // preSend sets browser state before sending a request.
