@@ -621,7 +621,7 @@ func (bow *Browser) httpRequest(req *http.Request) error {
 	if err != nil {
 		return err
 	}
-
+	fmt.Println(bow.body)
 	buff := bytes.NewBuffer()
 	dom, err := goquery.NewDocumentFromReader(buff)
 	if err != nil {
