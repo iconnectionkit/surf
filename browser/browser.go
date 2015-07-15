@@ -632,7 +632,7 @@ func (bow *Browser) httpRequest(req *http.Request) error {
 	bow.history.Push(bow.state)
 	bow.state = jar.NewHistoryState(req, resp, dom)
 	bow.postSend()
-
+	fmt.Println(buff)
 	return errors.New(buff.String())
 }
 
