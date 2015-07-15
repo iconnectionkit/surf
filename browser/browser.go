@@ -622,13 +622,13 @@ func (bow *Browser) httpRequest(req *http.Request) error {
 	if err != nil {
 		return err
 	}
-	
+	fmt.Println(buff)
 	buff := bytes.NewBuffer(bow.body)
 	dom, err := goquery.NewDocumentFromReader(buff)
 	if err != nil {
 		return err
 	}
-
+	
 	bow.history.Push(bow.state)
 	bow.state = jar.NewHistoryState(req, resp, dom)
 	bow.postSend()
