@@ -619,6 +619,7 @@ func (bow *Browser) httpRequest(req *http.Request) error {
 	}
 	fmt.Println(resp.Status)
 	fmt.Println(resp.Body)
+	fmt.Println(resp.Request)
 	bow.body, err = ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return err
