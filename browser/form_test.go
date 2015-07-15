@@ -2,8 +2,8 @@ package browser
 
 import (
 	"fmt"
-	"github.com/headzoo/surf/jar"
-	"github.com/headzoo/ut"
+	"github.com/iconnectionkit/surf/jar"
+	"github.com/iconnectionkit/ut"
 	"net/http"
 	"net/http/httptest"
 	"testing"
