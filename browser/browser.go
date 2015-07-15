@@ -624,16 +624,15 @@ func (bow *Browser) httpRequest(req *http.Request) error {
 	}
 	
 	buff := bytes.NewBuffer(bow.body)
-	fmt.Println(buff.String())
 	dom, err := goquery.NewDocumentFromReader(buff)
 	if err != nil {
-		errors.New(buff.String())
+		return errors.New("Hello")
 	}
 	
 	bow.history.Push(bow.state)
 	bow.state = jar.NewHistoryState(req, resp, dom)
 	bow.postSend()
-	return errors.New(buff.String())
+	return errors.New("Hello")
 }
 
 // preSend sets browser state before sending a request.
